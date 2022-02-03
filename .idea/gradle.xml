@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/abastecimento" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/comum" />
+            <option value="$PROJECT_DIR$/devolucao" />
             <option value="$PROJECT_DIR$/picking" />
           </set>
         </option>
