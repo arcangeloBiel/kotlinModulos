@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.LoginFragment"
+     android:theme="@style/ThemeOverlay.AppCompat.DayNight">
 
-tools:context=".presentation.ui.LoginFragment"
-android:theme="@style/ThemeOverlay.AppCompat.DayNight">
-
-<!--<data>-->
-<!--    <variable-->
-<!--        name="viewmodel"-->
-<!--        type="com.havan.app.picking.ui.login.LoginViewModel" />-->
-<!--</data>-->
 
 <ScrollView
     android:layout_width="match_parent"
@@ -117,4 +114,4 @@ android:theme="@style/ThemeOverlay.AppCompat.DayNight">
 
 
 
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -79,16 +79,15 @@ ext {
             core                   : "androidx.core:core-ktx:$coreVersion",
 
             koin                  : "io.insert-koin:koin-android:$koinVersion",
-            koinViewModel         : "io.insert-koin:koin-android-ext:$koinVersion",
+            koinExt       : "io.insert-koin:koin-android-ext:$koinVersion",
 
-            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
-            retrofit              : "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
-            retrofitRxAdapter     : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
-            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+//            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+//            retrofitMoshi          : "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+//            retrofitRxAdapter     : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+//            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
             gson                  : "com.google.code.gson:gson:$gsonVersion",
 
             room                  : "androidx.room:room-runtime:$roomVersion",
-            roomRxJava            : "androidx.room:room-rxjava2:$roomVersion",
             roomCompiler          : "androidx.room:room-compiler:$roomVersion",
             roomKtx               : "androidx.room:room-ktx:$roomVersion",
 
