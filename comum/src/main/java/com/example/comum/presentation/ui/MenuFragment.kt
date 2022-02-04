@@ -1,12 +1,13 @@
 package com.example.comum.presentation.ui
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.comum.R
+import com.example.comum.databinding.LoginFragmentBinding
+import com.example.comum.databinding.MenuFragmentBinding
 
 class MenuFragment : Fragment() {
 
@@ -14,19 +15,32 @@ class MenuFragment : Fragment() {
         fun newInstance() = MenuFragment()
     }
 
+    private var _binding: MenuFragmentBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var viewModel: MenuViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.menu_fragment, container, false)
+      //  return inflater.inflate(R.layout.menu_fragment, container, false)
+        _binding = MenuFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MenuViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+       // viewModel = ViewModelProvider(this).get(MenuViewModel::class.java)
+
         // TODO: Use the ViewModel
+        binding.cardAbastecimento.setOnClickListener {
+
+        }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

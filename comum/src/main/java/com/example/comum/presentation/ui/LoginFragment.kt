@@ -28,7 +28,6 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         binding.buttonLogin.setOnClickListener {
             //Pode criar uma extensão personalizada
