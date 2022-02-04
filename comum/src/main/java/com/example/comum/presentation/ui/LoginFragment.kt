@@ -31,7 +31,7 @@ class LoginFragment : Fragment() {
         //viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         binding.buttonLogin.setOnClickListener {
-            //pode criar uma extensão personalizada
+            //Pode criar uma extensão personalizada
            val action = LoginFragmentDirections.actionLoginFragmentToMenuFragment()
             findNavController().navigate(action)
          }

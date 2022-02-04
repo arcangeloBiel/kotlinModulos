@@ -1,13 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_gradiente_radial"
     tools:context=".presentation.ui.MenuFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+    <androidx.cardview.widget.CardView
+        xmlns:cardView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardPicking"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        cardView:cardCornerRadius="8dp"
+        cardView:cardElevation="8dp"
+        android:layout_margin="8dp"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/imagePicking"
+                android:scaleType="centerCrop"
+                tools:background="@tools:sample/backgrounds/scenic"
+                android:src="@drawable/menu_logo_picking"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/titlePicking"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:lines="1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Picking"
+                android:textColor="#000"
+                cardView:layout_constraintTop_toTopOf="parent"
+                cardView:layout_constraintLeft_toRightOf="@id/imagePicking"
+                cardView:layout_constraintRight_toRightOf="parent"
+                cardView:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-</FrameLayout>
+    <androidx.cardview.widget.CardView
+        xmlns:cardView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardAbastecimento"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        cardView:cardCornerRadius="8dp"
+        cardView:cardElevation="8dp"
+        android:layout_margin="8dp"
+
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+            <ImageView
+                android:id="@+id/imageAbastecimento"
+                android:scaleType="centerCrop"
+                tools:background="@tools:sample/backgrounds/scenic"
+                android:src="@drawable/menu_logo_abastecimento"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/titleAbastecimento"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:lines="1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Abastecimento"
+                android:textColor="#000"
+                cardView:layout_constraintTop_toTopOf="parent"
+                cardView:layout_constraintLeft_toRightOf="@id/imageAbastecimento"
+                cardView:layout_constraintRight_toRightOf="parent"
+                cardView:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
