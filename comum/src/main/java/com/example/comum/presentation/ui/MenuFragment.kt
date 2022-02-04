@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.comum.R
 import com.example.comum.databinding.LoginFragmentBinding
 import com.example.comum.databinding.MenuFragmentBinding
@@ -35,7 +36,8 @@ class MenuFragment : Fragment() {
 
         // TODO: Use the ViewModel
         binding.cardAbastecimento.setOnClickListener {
-
+          val action = MenuFragmentDirections.actionMenuFragmentToDispositivosFragment()
+            findNavController().navigate(action)
         }
     }
     override fun onDestroyView() {

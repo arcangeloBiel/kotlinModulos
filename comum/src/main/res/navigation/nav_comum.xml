@@ -17,5 +17,14 @@
         android:id="@+id/menuFragment"
         android:name="com.example.comum.presentation.ui.MenuFragment"
         android:label="menu_fragment"
-        tools:layout="@layout/menu_fragment" />
+        tools:layout="@layout/menu_fragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_dispositivosFragment"
+            app:destination="@id/dispositivosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dispositivosFragment"
+        android:name="com.example.comum.presentation.ui.DispositivosFragment"
+        android:label="dispositivos_fragment"
+        tools:layout="@layout/dispositivos_fragment" />
 </navigation>
