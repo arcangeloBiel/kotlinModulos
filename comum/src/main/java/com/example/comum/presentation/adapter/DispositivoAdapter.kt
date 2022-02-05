@@ -1,13 +1,18 @@
 package com.example.comum.presentation.adapter
 
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.comum.R
 import com.example.comum.data.model.Dispositivos
+import com.example.comum.presentation.ui.DispositivosFragmentDirections
+
 
 class DispositivoAdapter (private val dataSet: MutableList<Dispositivos>) :
     RecyclerView.Adapter<DispositivoAdapter.ViewHolder>() {
@@ -21,6 +26,7 @@ class DispositivoAdapter (private val dataSet: MutableList<Dispositivos>) :
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val nomeDispositivo: TextView = view.findViewById(R.id.nomeDispositivo)
         val statusDispositivo: TextView = view.findViewById(R.id.status_dispositivo)
+        val cardViewColetor: CardView = itemView.findViewById(R.id.cardViewColetor)
 
         init {
             itemView.setOnClickListener(this)
@@ -51,6 +57,12 @@ class DispositivoAdapter (private val dataSet: MutableList<Dispositivos>) :
 //            viewHolder.statusDispositivo.text = "Desconectado"
 //            viewHolder.statusDispositivo.setTextColor(Color.RED)
 //        }
+
+        viewHolder.cardViewColetor.setOnClickListener {
+           Log.d("teste", "passou aqui ${dataSet[position].id}")
+//            val action = DispositivosFragmentDirections.actionDispositivosFragmentToNavPicking2()
+//            viewHolder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount() = dataSet.size

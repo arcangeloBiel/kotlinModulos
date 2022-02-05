@@ -43,8 +43,7 @@ android {
 }
 
 dependencies {
-    //implementation project(':app')
-
+    implementation project(path: ':picking')
 
     def dependencies = rootProject.ext.dependencies
 

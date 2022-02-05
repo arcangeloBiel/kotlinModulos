@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_comum"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/loginFragment"
+    tools:ignore="UnusedNavigation"
+    >
 
     <fragment
         android:id="@+id/loginFragment"
@@ -26,5 +28,10 @@
         android:id="@+id/dispositivosFragment"
         android:name="com.example.comum.presentation.ui.DispositivosFragment"
         android:label="dispositivos_fragment"
-        tools:layout="@layout/dispositivos_fragment" />
+        tools:layout="@layout/dispositivos_fragment" >
+        <action
+            android:id="@+id/action_dispositivosFragment_to_nav_picking2"
+            app:destination="@id/nav_picking" />
+    </fragment>
+    <include app:graph="@navigation/nav_picking" />
 </navigation>

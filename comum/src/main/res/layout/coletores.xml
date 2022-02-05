@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:id="@+id/cardViewColetor"
     android:layout_margin="5dp"
     app:cardCornerRadius="10dp"
     android:elevation="10sp">

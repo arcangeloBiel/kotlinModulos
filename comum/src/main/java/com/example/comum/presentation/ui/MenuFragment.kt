@@ -35,7 +35,7 @@ class MenuFragment : Fragment() {
        // viewModel = ViewModelProvider(this).get(MenuViewModel::class.java)
 
         // TODO: Use the ViewModel
-        binding.cardAbastecimento.setOnClickListener {
+        binding.cardPicking.setOnClickListener {
           val action = MenuFragmentDirections.actionMenuFragmentToDispositivosFragment()
             findNavController().navigate(action)
         }
