@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_abastecimento"
+    app:startDestination="@id/menuAbastecimentoFragment">
+
+    <fragment
+        android:id="@+id/menuAbastecimentoFragment"
+        android:name="com.example.abastecimento.presentation.ui.MenuAbastecimentoFragment"
+        android:label="menu_abastecimento_fragment"
+        tools:layout="@layout/menu_abastecimento_fragment" >
+        <action
+            android:id="@+id/action_menuAbastecimentoFragment_to_listaItensAbastecimentoFragment"
+            app:destination="@id/listaItensAbastecimentoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaItensAbastecimentoFragment"
+        android:name="com.example.abastecimento.presentation.ui.ListaItensAbastecimentoFragment"
+        android:label="lista_itens_abastecimento_fragment"
+        tools:layout="@layout/lista_itens_abastecimento_fragment" />
+</navigation>

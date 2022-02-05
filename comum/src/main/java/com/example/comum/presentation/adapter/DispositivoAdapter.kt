@@ -60,8 +60,8 @@ class DispositivoAdapter (private val dataSet: MutableList<Dispositivos>) :
 
         viewHolder.cardViewColetor.setOnClickListener {
            Log.d("teste", "passou aqui ${dataSet[position].id}")
-//            val action = DispositivosFragmentDirections.actionDispositivosFragmentToNavPicking2()
-//            viewHolder.itemView.findNavController().navigate(action)
+            val action = DispositivosFragmentDirections.actionDispositivosFragmentToNavAbastecimento()
+            viewHolder.itemView.findNavController().navigate(action)
         }
     }
 

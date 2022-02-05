@@ -32,6 +32,10 @@
         <action
             android:id="@+id/action_dispositivosFragment_to_nav_picking2"
             app:destination="@id/nav_picking" />
+        <action
+            android:id="@+id/action_dispositivosFragment_to_nav_abastecimento"
+            app:destination="@id/nav_abastecimento" />
     </fragment>
     <include app:graph="@navigation/nav_picking" />
+    <include app:graph="@navigation/nav_abastecimento" />
 </navigation>
