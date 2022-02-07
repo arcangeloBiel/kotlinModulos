@@ -60,7 +60,7 @@ class DispositivoAdapter (
 //            viewHolder.statusDispositivo.setTextColor(Color.RED)
 //        }
 
-        
+
         viewHolder.cardViewColetor.setOnClickListener {
 
         if (menuName == "Picking") {
