@@ -1,6 +1,5 @@
 package com.example.comum.presentation.adapter
 
-import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,10 @@ import com.example.comum.data.model.Dispositivos
 import com.example.comum.presentation.ui.DispositivosFragmentDirections
 
 
-class DispositivoAdapter (private val dataSet: MutableList<Dispositivos>) :
+class DispositivoAdapter (
+    private val dataSet: MutableList<Dispositivos>,
+    private var menuName: String,
+    ) :
     RecyclerView.Adapter<DispositivoAdapter.ViewHolder>() {
 
 //    private var clickListener: ItemClickListener? = null
@@ -58,10 +60,18 @@ class DispositivoAdapter (private val dataSet: MutableList<Dispositivos>) :
 //            viewHolder.statusDispositivo.setTextColor(Color.RED)
 //        }
 
+        
         viewHolder.cardViewColetor.setOnClickListener {
-           Log.d("teste", "passou aqui ${dataSet[position].id}")
+
+        if (menuName == "Picking") {
+            val action = DispositivosFragmentDirections.actionDispositivosFragmentToNavPicking2()
+            viewHolder.itemView.findNavController().navigate(action)
+
+        } else if (menuName == "Abastecimento") {
             val action = DispositivosFragmentDirections.actionDispositivosFragmentToNavAbastecimento()
             viewHolder.itemView.findNavController().navigate(action)
+        }
+
         }
     }
 

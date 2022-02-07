@@ -1,6 +1,7 @@
 package com.example.comum.presentation.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,8 @@ import com.example.comum.databinding.DispositivosFragmentBinding
 import com.example.comum.presentation.adapter.DispositivoAdapter
 
 class DispositivosFragment : Fragment() {
+
+    private lateinit var menuName: String
 
     companion object {
         fun newInstance() = DispositivosFragment()
@@ -35,8 +38,8 @@ class DispositivosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-      //  viewModel = ViewModelProvider(this).get(DispositivosViewModel::class.java)
         // TODO: Use the ViewModel
+       menuName = requireArguments().get("menuName") as String
 
         listaDispositivo()
 
@@ -60,7 +63,7 @@ class DispositivosFragment : Fragment() {
           ),
 
           )
-      dispositivoAdapter = DispositivoAdapter(item)
+      dispositivoAdapter = DispositivoAdapter(item, menuName)
 
       binding.recyclerView.apply {
           adapter = dispositivoAdapter

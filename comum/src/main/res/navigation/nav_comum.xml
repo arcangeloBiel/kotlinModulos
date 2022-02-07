@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_dispositivosFragment_to_nav_abastecimento"
             app:destination="@id/nav_abastecimento" />
+        <argument
+            android:name="menuName"
+            app:argType="string" />
     </fragment>
     <include app:graph="@navigation/nav_picking" />
     <include app:graph="@navigation/nav_abastecimento" />

@@ -11,6 +11,6 @@
         android:layout_height="match_parent"
         android:textColor="#000"
         android:textSize="50dp"
-        android:text="Hello" />
+        android:text="Hello Picking" />
 
 </FrameLayout>

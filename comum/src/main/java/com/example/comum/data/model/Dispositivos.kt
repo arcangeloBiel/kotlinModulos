@@ -6,5 +6,6 @@ data class Dispositivos(
     var id: Int,
     var status: String,
     var nome: String? = null,
+
 ) : Serializable
 
