@@ -8,7 +8,7 @@ import org.koin.dsl.module
 
 val remoteModule = module {
     single { RetrofitInstance.provideOkHttpClient() }
-    single { RetrofitInstance.create(get(), "https://caminho de sua api/") as LoginService }
+    single { RetrofitInstance.create(get(), "/") as LoginService }
    factory<LoginRemoteDataSource> { LoginRemoteDataSourceImpl(get()) }
 }
 

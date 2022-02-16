@@ -36,7 +36,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="Havan"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
                 android:maxLines="1"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="#fff" />
+                android:textColor="#000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +89,7 @@
                 android:maxLines="1"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="#fff" />
+                android:textColor="#000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
